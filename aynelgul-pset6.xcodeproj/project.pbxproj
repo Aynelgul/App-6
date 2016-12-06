@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		85D9885A1DF6F6CB00CACE84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D988591DF6F6CB00CACE84 /* AppDelegate.swift */; };
-		85D9885C1DF6F6CB00CACE84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9885B1DF6F6CB00CACE84 /* ViewController.swift */; };
 		85D9885F1DF6F6CB00CACE84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85D9885D1DF6F6CB00CACE84 /* Main.storyboard */; };
 		85D988611DF6F6CC00CACE84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85D988601DF6F6CC00CACE84 /* Assets.xcassets */; };
 		85D988641DF6F6CC00CACE84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85D988621DF6F6CC00CACE84 /* LaunchScreen.storyboard */; };
 		85D9886F1DF6F6CC00CACE84 /* aynelgul_pset6Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9886E1DF6F6CC00CACE84 /* aynelgul_pset6Tests.swift */; };
 		85D9887A1DF6F6CC00CACE84 /* aynelgul_pset6UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D988791DF6F6CC00CACE84 /* aynelgul_pset6UITests.swift */; };
+		85D988881DF7284000CACE84 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D988871DF7283F00CACE84 /* MenuViewController.swift */; };
+		85D9888A1DF73F9600CACE84 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D988891DF73F9600CACE84 /* LoginViewController.swift */; };
+		85D9888D1DF74BDA00CACE84 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9888C1DF74BDA00CACE84 /* UserViewController.swift */; };
+		85D9888F1DF74C0D00CACE84 /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9888E1DF74C0D00CACE84 /* TipsViewController.swift */; };
+		85D988911DF74E8A00CACE84 /* SpecificTravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D988901DF74E8A00CACE84 /* SpecificTravelViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,6 @@
 /* Begin PBXFileReference section */
 		85D988561DF6F6CA00CACE84 /* aynelgul-pset6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "aynelgul-pset6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D988591DF6F6CB00CACE84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		85D9885B1DF6F6CB00CACE84 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		85D9885E1DF6F6CB00CACE84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85D988601DF6F6CC00CACE84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85D988631DF6F6CC00CACE84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,11 @@
 		85D988751DF6F6CC00CACE84 /* aynelgul-pset6UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "aynelgul-pset6UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D988791DF6F6CC00CACE84 /* aynelgul_pset6UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aynelgul_pset6UITests.swift; sourceTree = "<group>"; };
 		85D9887B1DF6F6CC00CACE84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85D988871DF7283F00CACE84 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		85D988891DF73F9600CACE84 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		85D9888C1DF74BDA00CACE84 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		85D9888E1DF74C0D00CACE84 /* TipsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
+		85D988901DF74E8A00CACE84 /* SpecificTravelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificTravelViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +105,8 @@
 		85D988581DF6F6CA00CACE84 /* aynelgul-pset6 */ = {
 			isa = PBXGroup;
 			children = (
+				85D9888B1DF747FC00CACE84 /* Controllers */,
 				85D988591DF6F6CB00CACE84 /* AppDelegate.swift */,
-				85D9885B1DF6F6CB00CACE84 /* ViewController.swift */,
 				85D9885D1DF6F6CB00CACE84 /* Main.storyboard */,
 				85D988601DF6F6CC00CACE84 /* Assets.xcassets */,
 				85D988621DF6F6CC00CACE84 /* LaunchScreen.storyboard */,
@@ -123,6 +131,18 @@
 				85D9887B1DF6F6CC00CACE84 /* Info.plist */,
 			);
 			path = "aynelgul-pset6UITests";
+			sourceTree = "<group>";
+		};
+		85D9888B1DF747FC00CACE84 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				85D988891DF73F9600CACE84 /* LoginViewController.swift */,
+				85D988871DF7283F00CACE84 /* MenuViewController.swift */,
+				85D9888C1DF74BDA00CACE84 /* UserViewController.swift */,
+				85D9888E1DF74C0D00CACE84 /* TipsViewController.swift */,
+				85D988901DF74E8A00CACE84 /* SpecificTravelViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +282,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85D9885C1DF6F6CB00CACE84 /* ViewController.swift in Sources */,
+				85D9888A1DF73F9600CACE84 /* LoginViewController.swift in Sources */,
+				85D9888F1DF74C0D00CACE84 /* TipsViewController.swift in Sources */,
+				85D988911DF74E8A00CACE84 /* SpecificTravelViewController.swift in Sources */,
+				85D9888D1DF74BDA00CACE84 /* UserViewController.swift in Sources */,
+				85D988881DF7284000CACE84 /* MenuViewController.swift in Sources */,
 				85D9885A1DF6F6CB00CACE84 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
