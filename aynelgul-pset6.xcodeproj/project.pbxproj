@@ -18,7 +18,6 @@
 		85D9887A1DF6F6CC00CACE84 /* aynelgul_pset6UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D988791DF6F6CC00CACE84 /* aynelgul_pset6UITests.swift */; };
 		85D988881DF7284000CACE84 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D988871DF7283F00CACE84 /* MenuViewController.swift */; };
 		85D9888A1DF73F9600CACE84 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D988891DF73F9600CACE84 /* LoginViewController.swift */; };
-		85D9888D1DF74BDA00CACE84 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9888C1DF74BDA00CACE84 /* UserViewController.swift */; };
 		85D9888F1DF74C0D00CACE84 /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9888E1DF74C0D00CACE84 /* TipsViewController.swift */; };
 		85D988911DF74E8A00CACE84 /* SpecificTravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D988901DF74E8A00CACE84 /* SpecificTravelViewController.swift */; };
 		85D988991DF8CD0100CACE84 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D988981DF8CD0100CACE84 /* User.swift */; };
@@ -30,6 +29,12 @@
 		85D988A31DFAD07000CACE84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85D988A21DFAD07000CACE84 /* GoogleService-Info.plist */; };
 		85D988A41DFAD07000CACE84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85D988A21DFAD07000CACE84 /* GoogleService-Info.plist */; };
 		85D988A51DFAD07000CACE84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85D988A21DFAD07000CACE84 /* GoogleService-Info.plist */; };
+		85D988AB1DFB66A800CACE84 /* UserTravelsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D988AA1DFB66A800CACE84 /* UserTravelsCell.swift */; };
+		85D988AC1DFB66A800CACE84 /* UserTravelsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D988AA1DFB66A800CACE84 /* UserTravelsCell.swift */; };
+		85D988AD1DFB66A800CACE84 /* UserTravelsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D988AA1DFB66A800CACE84 /* UserTravelsCell.swift */; };
+		85D988AF1DFB70DC00CACE84 /* TravelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D988AE1DFB70DC00CACE84 /* TravelsViewController.swift */; };
+		85D988B01DFB70DC00CACE84 /* TravelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D988AE1DFB70DC00CACE84 /* TravelsViewController.swift */; };
+		85D988B11DFB70DC00CACE84 /* TravelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D988AE1DFB70DC00CACE84 /* TravelsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,13 +74,14 @@
 		85D9887B1DF6F6CC00CACE84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85D988871DF7283F00CACE84 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		85D988891DF73F9600CACE84 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		85D9888C1DF74BDA00CACE84 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		85D9888E1DF74C0D00CACE84 /* TipsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		85D988901DF74E8A00CACE84 /* SpecificTravelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificTravelViewController.swift; sourceTree = "<group>"; };
 		85D988981DF8CD0100CACE84 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		85D9889C1DF8CD2800CACE84 /* TravelItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelItem.swift; sourceTree = "<group>"; };
 		85D988A11DFA0F1B00CACE84 /* aynelgul-pset6.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "aynelgul-pset6.entitlements"; sourceTree = "<group>"; };
 		85D988A21DFAD07000CACE84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		85D988AA1DFB66A800CACE84 /* UserTravelsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTravelsCell.swift; sourceTree = "<group>"; };
+		85D988AE1DFB70DC00CACE84 /* TravelsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelsViewController.swift; sourceTree = "<group>"; };
 		AC5A69F0F3FC24F809D46CD8 /* Pods-aynelgul-pset6UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aynelgul-pset6UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aynelgul-pset6UITests/Pods-aynelgul-pset6UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B966D79BC19F4D81C4538E63 /* Pods-aynelgul-pset6.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aynelgul-pset6.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aynelgul-pset6/Pods-aynelgul-pset6.debug.xcconfig"; sourceTree = "<group>"; };
 		C6CBB5523187F2887961D7C3 /* Pods_aynelgul_pset6Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aynelgul_pset6Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,9 +199,10 @@
 			children = (
 				85D988891DF73F9600CACE84 /* LoginViewController.swift */,
 				85D988871DF7283F00CACE84 /* MenuViewController.swift */,
-				85D9888C1DF74BDA00CACE84 /* UserViewController.swift */,
 				85D9888E1DF74C0D00CACE84 /* TipsViewController.swift */,
 				85D988901DF74E8A00CACE84 /* SpecificTravelViewController.swift */,
+				85D988AE1DFB70DC00CACE84 /* TravelsViewController.swift */,
+				85D988AA1DFB66A800CACE84 /* UserTravelsCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -494,14 +501,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85D988AB1DFB66A800CACE84 /* UserTravelsCell.swift in Sources */,
 				85D9889D1DF8CD2800CACE84 /* TravelItem.swift in Sources */,
 				85D9888A1DF73F9600CACE84 /* LoginViewController.swift in Sources */,
 				85D9888F1DF74C0D00CACE84 /* TipsViewController.swift in Sources */,
 				85D988911DF74E8A00CACE84 /* SpecificTravelViewController.swift in Sources */,
-				85D9888D1DF74BDA00CACE84 /* UserViewController.swift in Sources */,
 				85D988881DF7284000CACE84 /* MenuViewController.swift in Sources */,
 				85D9885A1DF6F6CB00CACE84 /* AppDelegate.swift in Sources */,
 				85D988991DF8CD0100CACE84 /* User.swift in Sources */,
+				85D988AF1DFB70DC00CACE84 /* TravelsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +517,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85D988AC1DFB66A800CACE84 /* UserTravelsCell.swift in Sources */,
+				85D988B01DFB70DC00CACE84 /* TravelsViewController.swift in Sources */,
 				85D9889A1DF8CD0100CACE84 /* User.swift in Sources */,
 				85D9886F1DF6F6CC00CACE84 /* aynelgul_pset6Tests.swift in Sources */,
 				85D9889E1DF8CD2800CACE84 /* TravelItem.swift in Sources */,
@@ -519,6 +529,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85D988AD1DFB66A800CACE84 /* UserTravelsCell.swift in Sources */,
+				85D988B11DFB70DC00CACE84 /* TravelsViewController.swift in Sources */,
 				85D9889B1DF8CD0100CACE84 /* User.swift in Sources */,
 				85D9887A1DF6F6CC00CACE84 /* aynelgul_pset6UITests.swift in Sources */,
 				85D9889F1DF8CD2800CACE84 /* TravelItem.swift in Sources */,

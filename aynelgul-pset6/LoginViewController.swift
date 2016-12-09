@@ -58,6 +58,7 @@ class LoginViewController: UIViewController {
     
     func signedIn(_ user: FIRUser?) {
         performSegue(withIdentifier: "gotoMenu", sender: nil)
+        
     }
     
 

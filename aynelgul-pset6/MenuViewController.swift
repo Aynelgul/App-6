@@ -11,6 +11,11 @@ import Firebase
 
 class MenuViewController: UIViewController {
     
+    
+    // MARK: Properties
+    var items: [TravelItem] = []
+    
+    
     @IBAction func logoutButton(_ sender: UIBarButtonItem) {
         let firebaseAuth = FIRAuth.auth()
         do {
@@ -35,12 +40,11 @@ class MenuViewController: UIViewController {
         
         // 3. Grab the value from the text field, and print it when the user clicks OK.
         alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { [weak alert] (_) in
-            let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
+            let textField = alert?.textFields![0]
             print("Text field: \(textField?.text)")
 
             let travelItem = TravelItem(name: textField!.text!)
             
-
             let TravelItemRef = self.ref.child(textField!.text!.lowercased())
             
 
@@ -58,11 +62,14 @@ class MenuViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
 
     /*
