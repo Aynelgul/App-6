@@ -21,15 +21,15 @@
 		85D9888D1DF74BDA00CACE84 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9888C1DF74BDA00CACE84 /* UserViewController.swift */; };
 		85D9888F1DF74C0D00CACE84 /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9888E1DF74C0D00CACE84 /* TipsViewController.swift */; };
 		85D988911DF74E8A00CACE84 /* SpecificTravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D988901DF74E8A00CACE84 /* SpecificTravelViewController.swift */; };
-		85D988931DF89F4B00CACE84 /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85D988921DF89F4B00CACE84 /* GoogleService-Info-2.plist */; };
-		85D988941DF89F4C00CACE84 /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85D988921DF89F4B00CACE84 /* GoogleService-Info-2.plist */; };
-		85D988951DF89F4C00CACE84 /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85D988921DF89F4B00CACE84 /* GoogleService-Info-2.plist */; };
 		85D988991DF8CD0100CACE84 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D988981DF8CD0100CACE84 /* User.swift */; };
 		85D9889A1DF8CD0100CACE84 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D988981DF8CD0100CACE84 /* User.swift */; };
 		85D9889B1DF8CD0100CACE84 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D988981DF8CD0100CACE84 /* User.swift */; };
 		85D9889D1DF8CD2800CACE84 /* TravelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9889C1DF8CD2800CACE84 /* TravelItem.swift */; };
 		85D9889E1DF8CD2800CACE84 /* TravelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9889C1DF8CD2800CACE84 /* TravelItem.swift */; };
 		85D9889F1DF8CD2800CACE84 /* TravelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9889C1DF8CD2800CACE84 /* TravelItem.swift */; };
+		85D988A31DFAD07000CACE84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85D988A21DFAD07000CACE84 /* GoogleService-Info.plist */; };
+		85D988A41DFAD07000CACE84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85D988A21DFAD07000CACE84 /* GoogleService-Info.plist */; };
+		85D988A51DFAD07000CACE84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85D988A21DFAD07000CACE84 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,9 +72,10 @@
 		85D9888C1DF74BDA00CACE84 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		85D9888E1DF74C0D00CACE84 /* TipsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
 		85D988901DF74E8A00CACE84 /* SpecificTravelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificTravelViewController.swift; sourceTree = "<group>"; };
-		85D988921DF89F4B00CACE84 /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
 		85D988981DF8CD0100CACE84 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		85D9889C1DF8CD2800CACE84 /* TravelItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelItem.swift; sourceTree = "<group>"; };
+		85D988A11DFA0F1B00CACE84 /* aynelgul-pset6.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "aynelgul-pset6.entitlements"; sourceTree = "<group>"; };
+		85D988A21DFAD07000CACE84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AC5A69F0F3FC24F809D46CD8 /* Pods-aynelgul-pset6UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aynelgul-pset6UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aynelgul-pset6UITests/Pods-aynelgul-pset6UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B966D79BC19F4D81C4538E63 /* Pods-aynelgul-pset6.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aynelgul-pset6.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aynelgul-pset6/Pods-aynelgul-pset6.debug.xcconfig"; sourceTree = "<group>"; };
 		C6CBB5523187F2887961D7C3 /* Pods_aynelgul_pset6Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aynelgul_pset6Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,13 +158,13 @@
 		85D988581DF6F6CA00CACE84 /* aynelgul-pset6 */ = {
 			isa = PBXGroup;
 			children = (
+				85D988A11DFA0F1B00CACE84 /* aynelgul-pset6.entitlements */,
+				85D988A01DF9A4F000CACE84 /* Layout */,
 				85D988971DF8CC2D00CACE84 /* Models */,
 				85D9888B1DF747FC00CACE84 /* Controllers */,
 				85D988591DF6F6CB00CACE84 /* AppDelegate.swift */,
-				85D9885D1DF6F6CB00CACE84 /* Main.storyboard */,
 				85D988601DF6F6CC00CACE84 /* Assets.xcassets */,
-				85D988621DF6F6CC00CACE84 /* LaunchScreen.storyboard */,
-				85D988921DF89F4B00CACE84 /* GoogleService-Info-2.plist */,
+				85D988A21DFAD07000CACE84 /* GoogleService-Info.plist */,
 				85D988651DF6F6CC00CACE84 /* Info.plist */,
 			);
 			path = "aynelgul-pset6";
@@ -206,6 +207,15 @@
 				85D9889C1DF8CD2800CACE84 /* TravelItem.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		85D988A01DF9A4F000CACE84 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				85D9885D1DF6F6CB00CACE84 /* Main.storyboard */,
+				85D988621DF6F6CC00CACE84 /* LaunchScreen.storyboard */,
+			);
+			name = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +296,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 372D866T32;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					85D988691DF6F6CC00CACE84 = {
 						CreatedOnToolsVersion = 8.1;
@@ -328,7 +343,7 @@
 			files = (
 				85D988641DF6F6CC00CACE84 /* LaunchScreen.storyboard in Resources */,
 				85D988611DF6F6CC00CACE84 /* Assets.xcassets in Resources */,
-				85D988931DF89F4B00CACE84 /* GoogleService-Info-2.plist in Resources */,
+				85D988A31DFAD07000CACE84 /* GoogleService-Info.plist in Resources */,
 				85D9885F1DF6F6CB00CACE84 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,7 +352,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85D988941DF89F4C00CACE84 /* GoogleService-Info-2.plist in Resources */,
+				85D988A41DFAD07000CACE84 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +360,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85D988951DF89F4C00CACE84 /* GoogleService-Info-2.plist in Resources */,
+				85D988A51DFAD07000CACE84 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,6 +658,7 @@
 			baseConfigurationReference = B966D79BC19F4D81C4538E63 /* Pods-aynelgul-pset6.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "aynelgul-pset6/aynelgul-pset6.entitlements";
 				DEVELOPMENT_TEAM = 372D866T32;
 				INFOPLIST_FILE = "aynelgul-pset6/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -657,6 +673,7 @@
 			baseConfigurationReference = CF5D1AAD9A9B845D3ED173CE /* Pods-aynelgul-pset6.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "aynelgul-pset6/aynelgul-pset6.entitlements";
 				DEVELOPMENT_TEAM = 372D866T32;
 				INFOPLIST_FILE = "aynelgul-pset6/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

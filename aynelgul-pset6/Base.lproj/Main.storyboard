@@ -135,6 +135,9 @@
                     <navigationItem key="navigationItem" title="Adventure Time" id="q0r-vk-hjQ">
                         <barButtonItem key="rightBarButtonItem" title="Log out" id="SsR-Az-nFl">
                             <color key="tintColor" red="0.15198194980621338" green="0.25780126452445984" blue="0.31899142265319824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="logoutButton:" destination="qDZ-Yv-Mtj" id="Uxd-xa-KWf"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -239,7 +242,6 @@
         <!--Login View Controller-->
         <scene sceneID="w7v-dJ-0mI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qNp-8g-Cdg" sceneMemberID="firstResponder"/>
                 <viewController id="IVB-2z-HKu" customClass="LoginViewController" customModule="aynelgul_pset6" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="isf-7n-mct"/>
@@ -292,17 +294,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loginTouch:" destination="IVB-2z-HKu" eventType="touchUpInside" id="Krj-xy-U2v"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwJ-WT-C7y">
-                                <rect key="frame" x="121" y="430" width="79" height="72"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="72" id="9o4-Wi-KTz"/>
-                                    <constraint firstAttribute="width" constant="79" id="TCm-9Y-fWJ"/>
-                                </constraints>
-                                <state key="normal" image="white plus sign"/>
-                                <connections>
-                                    <action selector="signupTouch:" destination="IVB-2z-HKu" eventType="touchUpInside" id="Gsv-fv-MoT"/>
+                                    <segue destination="iBP-Kk-jW0" kind="show" identifier="gotoMenu" id="W7g-5q-MVn"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtu-2D-ra7">
@@ -314,6 +306,17 @@
                                 <color key="textColor" red="0.96502590673575128" green="0.96502590673575128" blue="0.96502590673575128" alpha="0.83500220070422537" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwJ-WT-C7y">
+                                <rect key="frame" x="121" y="167" width="79" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="9o4-Wi-KTz"/>
+                                    <constraint firstAttribute="width" constant="79" id="TCm-9Y-fWJ"/>
+                                </constraints>
+                                <state key="normal" image="white plus sign"/>
+                                <connections>
+                                    <action selector="signupTouch:" destination="IVB-2z-HKu" eventType="touchUpInside" id="Gsv-fv-MoT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="I2M-H2-NHZ" firstAttribute="trailing" secondItem="xrj-pH-UJQ" secondAttribute="trailing" id="0Ax-f7-4Wf"/>
@@ -335,8 +338,8 @@
                             <constraint firstItem="YIY-26-EgV" firstAttribute="top" secondItem="UWa-Iw-oNH" secondAttribute="bottom" id="igo-JX-ANS"/>
                             <constraint firstAttribute="trailing" secondItem="2yk-Qd-pIC" secondAttribute="trailing" id="k2O-Hl-joe"/>
                             <constraint firstItem="2yk-Qd-pIC" firstAttribute="top" secondItem="isf-7n-mct" secondAttribute="bottom" constant="83" id="ooE-ZZ-xWF"/>
-                            <constraint firstAttribute="bottom" secondItem="vwJ-WT-C7y" secondAttribute="bottom" constant="66" id="sMI-qO-uGe"/>
-                            <constraint firstItem="Gtu-2D-ra7" firstAttribute="top" secondItem="vwJ-WT-C7y" secondAttribute="bottom" constant="8" symbolic="YES" id="sTI-wP-ojf"/>
+                            <constraint firstAttribute="bottom" secondItem="vwJ-WT-C7y" secondAttribute="bottom" constant="329" id="sMI-qO-uGe"/>
+                            <constraint firstItem="Gtu-2D-ra7" firstAttribute="top" secondItem="vwJ-WT-C7y" secondAttribute="bottom" constant="271" id="sTI-wP-ojf"/>
                             <constraint firstItem="I2M-H2-NHZ" firstAttribute="top" secondItem="2yk-Qd-pIC" secondAttribute="bottom" constant="63" id="w0F-zy-3Cv"/>
                             <constraint firstItem="I2M-H2-NHZ" firstAttribute="leading" secondItem="s9t-l8-x84" secondAttribute="leadingMargin" constant="54" id="y2g-8d-LxR"/>
                         </constraints>
@@ -346,6 +349,7 @@
                         <outlet property="textFieldLoginPassword" destination="xrj-pH-UJQ" id="NbQ-i1-kUg"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qNp-8g-Cdg" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1008.75" y="147.88732394366198"/>
         </scene>

@@ -11,6 +11,15 @@ import Firebase
 
 class MenuViewController: UIViewController {
     
+    @IBAction func logoutButton(_ sender: UIBarButtonItem) {
+        let firebaseAuth = FIRAuth.auth()
+        do {
+            try firebaseAuth?.signOut()
+            dismiss(animated: true, completion: nil)
+        } catch let signOutError as NSError {
+            print ("Error signing out: \(signOutError.localizedDescription)")
+        }
+    }
     // MARK: Properties
     let ref = FIRDatabase.database().reference(withPath: "travel-items")
     
@@ -18,7 +27,7 @@ class MenuViewController: UIViewController {
     @IBAction func addNewTravel(_ sender: UIButton) {
         // alert, vragen om land/stad (hangt van API af)
         
-        let alert = UIAlertController(title: "Save", message: "New adventure:", preferredStyle: .alert)
+        let alert = UIAlertController(title: "New adventure", message: "Add country:", preferredStyle: .alert)
         
         alert.addTextField { (textField) in
             textField.text = ""
@@ -28,19 +37,14 @@ class MenuViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { [weak alert] (_) in
             let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
             print("Text field: \(textField?.text)")
+
+            let travelItem = TravelItem(name: textField!.text!)
             
-            let text = textField!.text
+
+            let TravelItemRef = self.ref.child(textField!.text!.lowercased())
             
-            let travelItem = TravelItem(name: text!//,
-//                                        addedByUser: self.user.email)
-            // 3
-            let TravelItemRef = self.ref.child(text!.lowercased())
-            
-            // 4
+
             TravelItemRef.setValue(travelItem.toAnyObject())
-            
-            
-//            self.tableView.reloadData()
 
         }))
         
