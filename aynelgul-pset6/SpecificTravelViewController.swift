@@ -23,28 +23,27 @@ class SpecificTravelViewController: UIViewController {
     }
     
     func HTTPSrequest(title: String) {
-//        let title = australia.replacingOccurrences(of: " ", with: "+")
-//        let url = URL(string: "https://restcountries.eu/rest/v1/name/"+title+"?fullText=true")
-//        let task = URLSession.shared.dataTask(with: url!, completionHandler: { data, response, error in
-//            guard let data = data, error == nil else {
-//                print(error!, "Could not load!")
-//                return
-//            }
-//            do {
-//                let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
-//                
-//                DispatchQueue.main.async {
+        let title = title.replacingOccurrences(of: " ", with: "+")
+        let url = URL(string: "https://restcountries.eu/rest/v1/name/"+title+"?fullText=true")
+        let task = URLSession.shared.dataTask(with: url!, completionHandler: { data, response, error in
+            guard let data = data, error == nil else {
+                print(error!, "Could not load!")
+                return
+            }
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
+
+                DispatchQueue.main.async {
 //                    self.data = json as! [String: String]
 //                    self.titles.append(json["Title"] as! String)
 //                    self.descriptions[self.data["Title"]!] = self.data["Plot"]
 //                    self.TableView.reloadData()
-//                    self.updateDatabase()
-//                }
-//            } catch {
-//                print(error,"No movie found.")
-//            }
-//        }).resume()
-        
+                }
+            } catch {
+                print(error,"Country not found.")
+            }
+        }).resume()
+    
     }
 
 
