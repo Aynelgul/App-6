@@ -14,21 +14,21 @@ class SpecificTravelViewController: UIViewController {
     
     // Outlets.
     @IBOutlet weak var countryOulet: UILabel?
-    
     @IBOutlet weak var capitalOutlet: UILabel!
-    
     @IBOutlet weak var populationOutlet: UILabel!
-    
     @IBOutlet weak var currencyOutlet: UILabel!
+    @IBOutlet weak var regionOutlet: UILabel!
+    @IBOutlet weak var flagImageOutlet: UIImageView!
     
     var countryreceiver = String()
+    var imageAlpha3Code = String()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         countryOulet?.text = self.countryreceiver
-        HTTPSrequest(title: "Australia")
-
-        // Do any additional setup after loading the view.
+        HTTPSrequest(title: self.countryreceiver)
+        HTTPSrequestImage(title: self.imageAlpha3Code)
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,11 +48,6 @@ class SpecificTravelViewController: UIViewController {
                 let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [AnyObject]
 
                 DispatchQueue.main.async {
-//                    let region = json["region"] as! String
-//                    let timezones = json["timezones"] as! NSArray
-//                    let borders = json["borders"] as! NSArray
-//                    let languages = json["languages"] as! NSArray
-//                    let currencies = json["currencies"] as! NSArray
                     
                     let capital = json[0]["capital"]! as! String 
                     print("TEST: \(capital)")
@@ -65,15 +60,68 @@ class SpecificTravelViewController: UIViewController {
                     
                     let testcur = currency[0] as! String
                     
+                    let region = json[0]["region"]! as! String
+                    print("TEST: \(region)")
+                    
+                    let alpha3Code = json[0]["alpha3Code"] as! String
+                    print("TEST: \(alpha3Code)")
+                    
                     self.capitalOutlet.text = capital
                     self.populationOutlet.text = String(describing: population!)
                     self.currencyOutlet.text = testcur
+                    self.regionOutlet.text = region
+                    
+                    self.imageAlpha3Code = alpha3Code
+                    print("TEST SELF ALPHA CODE: \(self.imageAlpha3Code)")
                 }
             } catch {
                 print(error,"Country not found.")
             }
         }).resume()
     
+    }
+    
+    func HTTPSrequestImage(title: String) {
+//        let url = URL(string: "http://www.geognos.com/api/en/countries/flag/"+title+".png")
+//        let task = URLSession.shared.dataTask(with: url!, completionHandler: { data, response, error in
+//            guard let data = data, error == nil else {
+//                print(error!, "Could not load image!")
+//                return
+//            }
+//            do {
+//                
+//                DispatchQueue.main.async {
+//                    self.flagImageOutlet.image = UIImage(data: data!)
+//
+//                }
+//            } catch {
+//                print(error,"Flag not found.")
+//            }
+//        }).resume()
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        if let url = NSURL(string: "http://www.geognos.com/api/en/countries/flag/"+title+".png"){
+            
+            let task = session.dataTask(with: url as URL, completionHandler: {data, response, error in
+                
+                if let err = error {
+                    print("Error: \(err)")
+                    return
+                }
+                
+                if let http = response as? HTTPURLResponse {
+                    if http.statusCode == 200 {
+                        let downloadedImage = UIImage(data: data!)
+                        DispatchQueue.main.async {
+                            self.flagImageOutlet.image = downloadedImage
+                        }
+                    }
+                }
+            })
+            task.resume()
+        }
+        
     }
 
 
