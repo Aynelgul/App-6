@@ -30,8 +30,7 @@ class MenuViewController: UIViewController {
     
     // MARK: Actions
     @IBAction func addNewTravel(_ sender: UIButton) {
-        // alert, vragen om land/stad (hangt van API af)
-        
+
         let alert = UIAlertController(title: "New adventure", message: "Add country:", preferredStyle: .alert)
         
         alert.addTextField { (textField) in
@@ -44,16 +43,16 @@ class MenuViewController: UIViewController {
             print("Text field: \(textField?.text)")
 
             let travelItem = TravelItem(name: textField!.text!)
-            
             let TravelItemRef = self.ref.child(textField!.text!.lowercased())
-            
 
             TravelItemRef.setValue(travelItem.toAnyObject())
-
         }))
         
         // 4. Present the alert.
         self.present(alert, animated: true, completion: nil)
+        
+        // ALERT als het is ingevuld en is gelukt!! waar/hoe moet dat?
+//        performSegue(withIdentifier: "goToTravels", sender: nil)
         
     }
 

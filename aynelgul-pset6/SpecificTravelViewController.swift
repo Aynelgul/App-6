@@ -10,9 +10,23 @@ import UIKit
 import Firebase
 
 class SpecificTravelViewController: UIViewController {
+    
+    
+    // Outlets.
+    @IBOutlet weak var countryOulet: UILabel?
+    
+    @IBOutlet weak var capitalOutlet: UILabel!
+    
+    @IBOutlet weak var populationOutlet: UILabel!
+    
+    @IBOutlet weak var currencyOutlet: UILabel!
+    
+    var countryreceiver = String()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        countryOulet?.text = self.countryreceiver
+        HTTPSrequest(title: "Australia")
 
         // Do any additional setup after loading the view.
     }
@@ -31,13 +45,29 @@ class SpecificTravelViewController: UIViewController {
                 return
             }
             do {
-                let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
+                let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [AnyObject]
 
                 DispatchQueue.main.async {
-//                    self.data = json as! [String: String]
-//                    self.titles.append(json["Title"] as! String)
-//                    self.descriptions[self.data["Title"]!] = self.data["Plot"]
-//                    self.TableView.reloadData()
+//                    let region = json["region"] as! String
+//                    let timezones = json["timezones"] as! NSArray
+//                    let borders = json["borders"] as! NSArray
+//                    let languages = json["languages"] as! NSArray
+//                    let currencies = json["currencies"] as! NSArray
+                    
+                    let capital = json[0]["capital"]! as! String 
+                    print("TEST: \(capital)")
+                    
+                    let population = json[0]["population"]!
+                    print("TEST: \(population)")
+                    
+                    let currency = json[0]["currencies"] as! NSArray
+                    print("TEST: \(currency)")
+                    
+                    let testcur = currency[0] as! String
+                    
+                    self.capitalOutlet.text = capital
+                    self.populationOutlet.text = String(describing: population!)
+                    self.currencyOutlet.text = testcur
                 }
             } catch {
                 print(error,"Country not found.")

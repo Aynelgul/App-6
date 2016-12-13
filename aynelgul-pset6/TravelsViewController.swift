@@ -12,31 +12,25 @@ import Firebase
 class TravelsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var travelTableView: UITableView!
-    var test = ["test", "oke", "nr3"]
+
     var items: [TravelItem] = []
+    var country_segue_name: String!
     
     let ref = FIRDatabase.database().reference(withPath: "travel-items")
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
         ref.observe(.value, with: { snapshot in
-            // 2
             var newItems: [TravelItem] = []
             
-            // 3
             for item in snapshot.children {
-                // 4
                 let travelItem = TravelItem(snapshot: item as! FIRDataSnapshot)
                 newItems.append(travelItem)
             }
             
-            // 5
             self.items = newItems
             self.travelTableView.reloadData()
-
         })
     }
 
@@ -53,7 +47,6 @@ class TravelsViewController: UIViewController, UITableViewDataSource, UITableVie
         let cell = tableView.dequeueReusableCell(withIdentifier: "countryCell", for: indexPath) as! UserTravelsCell
         
         let item = items[indexPath.row]
-        
         cell.countryLabel?.text = item.name
         
         return cell
@@ -61,7 +54,20 @@ class TravelsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let name = items[indexPath.row].name
+        print(name)
+        self.country_segue_name = name
+        print(self.country_segue_name)
+        
         performSegue(withIdentifier: "detailView", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailView" {
+            let destination = segue.destination as? SpecificTravelViewController
+            print(self.country_segue_name)
+            destination?.countryreceiver = self.country_segue_name
+        }
     }
     
 
