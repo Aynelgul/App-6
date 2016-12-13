@@ -53,7 +53,7 @@ class TravelsViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let name = items[indexPath.row].name
         print(name)
         self.country_segue_name = name
