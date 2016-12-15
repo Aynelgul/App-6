@@ -18,13 +18,17 @@ class LoginViewController: UIViewController {
     
     // MARK: Actions
     @IBAction func loginTouch(_ sender: UIButton) {
-        // inlog gegevens checken
-            // juist: inloggen, volgend scherm
-            // onjuist: foutmelding, opnieuw 'return'
         
-        FIRAuth.auth()?.signIn(withEmail: textFieldLoginEmail.text!, password: textFieldLoginPassword.text!) { (user, error) in
+//        // Sign In with credentials.
+        guard let email = textFieldLoginEmail.text, let password = textFieldLoginPassword.text else { return }
+        FIRAuth.auth()?.signIn(withEmail: email, password: password) { (user, error) in
             if let error = error {
                 print(error.localizedDescription)
+                
+                let alert = UIAlertController(title: "Oops!", message: "That e-mailadress and/or password is not correct! Try again or sign up.", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+        
                 return
             }
             self.signedIn(user!)
@@ -57,6 +61,7 @@ class LoginViewController: UIViewController {
     }
     
     func signedIn(_ user: FIRUser?) {
+        
         performSegue(withIdentifier: "gotoMenu", sender: nil)
         
     }
@@ -64,20 +69,24 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
-        //Looks for single or multiple taps.
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
-//        tap.cancelsTouchesInView = false
-//        
-//        view.addGestureRecognizer(tap)
+        // Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        
+        view.addGestureRecognizer(tap)
         
         if let user = FIRAuth.auth()?.currentUser {
             self.signedIn(user)
         }
         
-        
+        self.textFieldLoginEmail.text! = ""
+        self.textFieldLoginPassword.text! = ""
+    }
+    
+    // Function when tap is recognized.
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {

@@ -78,15 +78,11 @@ class SpecificTravelViewController: UIViewController {
     }
     
     func HTTPSrequestImage(title: String) {
-        
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
         if let url = NSURL(string: "http://www.geognos.com/api/en/countries/flag/"+title+".png"){
             
-            print("URL: \(url)")
-            
             let task = session.dataTask(with: url as URL, completionHandler: {data, response, error in
-                
                 if let err = error {
                     print("Error: \(err)")
                     return

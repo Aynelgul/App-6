@@ -37,22 +37,36 @@ class MenuViewController: UIViewController {
             textField.text = ""
         }
         
-        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        // 3. Grab  value from text field, and print it when the user clicks OK.
         alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { [weak alert] (_) in
+            
             let textField = alert?.textFields![0]
             print("Text field: \(textField?.text)")
-
-            let travelItem = TravelItem(name: textField!.text!)
-            let TravelItemRef = self.ref.child(textField!.text!.lowercased())
+            
+            if textField?.text == "" {
+                print("Textfield is empty!")
+                
+                // Present error alert empty textfield.
+                let alertController = UIAlertController(title: "Try again", message:
+                    "Please fill in a country.", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler: nil))
+                
+                self.present(alertController, animated: true, completion: nil)
+                
+                return
+                
+            }
+            
+            let travelItem = TravelItem(name: (textField?.text!)!)
+            let TravelItemRef = self.ref.child((textField?.text!.lowercased())!)
 
             TravelItemRef.setValue(travelItem.toAnyObject())
+            
+            self.performSegue(withIdentifier: "goToTravels", sender: nil)
         }))
         
         // 4. Present the alert.
         self.present(alert, animated: true, completion: nil)
-        
-        // ALERT als het is ingevuld en is gelukt!! waar/hoe moet dat?
-//        performSegue(withIdentifier: "goToTravels", sender: nil)
         
     }
 
