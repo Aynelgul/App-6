@@ -53,6 +53,12 @@ class LoginViewController: UIViewController {
                     self.present(alert, animated: true, completion: nil)
                 }
                 
+                if error.localizedDescription == "The password must be 6 characters long or more." {
+                    let alert = UIAlertController(title: "Oops!", message: "The password must be 6 characters long or more.", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+                
                 let alert = UIAlertController(title: "Oops!", message: "Sign up failed. Please fill in all fields or check your e-mailadress.", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
@@ -116,6 +122,19 @@ class LoginViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func encodeRestorableState(with coder: NSCoder) {
+        if let email = textFieldLoginPassword.text {
+            print(email)
+            coder.encode(email, forKey: "LoginTextfieldPassword")
+        }
+        super.encodeRestorableState(with: coder)
+    }
+    
+    override func decodeRestorableState(with coder: NSCoder) {
+        textFieldLoginPassword.text = coder.decodeObject(forKey: "LoginTextfieldPassword") as! String?
+        super.decodeRestorableState(with: coder)
     }
     
 

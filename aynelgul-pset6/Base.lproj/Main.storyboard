@@ -493,7 +493,7 @@
         <!--Login View Controller-->
         <scene sceneID="w7v-dJ-0mI">
             <objects>
-                <viewController id="IVB-2z-HKu" customClass="LoginViewController" customModule="aynelgul_pset6" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IVB-2z-HKu" customClass="LoginViewController" customModule="aynelgul_pset6" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="isf-7n-mct"/>
                         <viewControllerLayoutGuide type="bottom" id="YIY-26-EgV"/>
