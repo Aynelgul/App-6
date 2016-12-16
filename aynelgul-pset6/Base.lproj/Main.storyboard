@@ -18,27 +18,27 @@
                         <viewControllerLayoutGuide type="top" id="DjZ-tK-0hg"/>
                         <viewControllerLayoutGuide type="bottom" id="4EG-vb-RMt"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="JvA-Mt-V9l">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="adventureTimeView" id="JvA-Mt-V9l">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="S5G-7l-sBW">
+                            <stackView opaque="NO" contentMode="scaleToFill" restorationIdentifier="AdventureTimeStackView" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="S5G-7l-sBW">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWv-8P-uDd">
+                                    <view contentMode="scaleToFill" restorationIdentifier="AdventureTimeStackView1" translatesAutoresizingMaskIntoConstraints="NO" id="rWv-8P-uDd">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountains_landscape_hd_4k-3840x2160" translatesAutoresizingMaskIntoConstraints="NO" id="XRw-eO-neb">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="AdventureTimeMountainsLandscape" image="mountains_landscape_hd_4k-3840x2160" translatesAutoresizingMaskIntoConstraints="NO" id="XRw-eO-neb">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZa-qi-S1f">
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="AdventureTimeButton1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZa-qi-S1f">
                                                 <rect key="frame" x="-1" y="0.0" width="321" height="168"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.49158230633802819" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <segue destination="tho-Qo-tH1" kind="show" identifier="goToTravels" id="CTs-L9-6fv"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="earth white symbol" translatesAutoresizingMaskIntoConstraints="NO" id="Qia-nE-qhG">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="AdventureTimeEarthSymbol" image="earth white symbol" translatesAutoresizingMaskIntoConstraints="NO" id="Qia-nE-qhG">
                                                 <rect key="frame" x="87.5" y="20" width="145" height="128"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="end-Hz-lEe"/>
@@ -60,20 +60,20 @@
                                             <constraint firstAttribute="trailing" secondItem="XRw-eO-neb" secondAttribute="trailing" id="l49-0q-EIR"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QKQ-n3-RFm">
+                                    <view contentMode="scaleToFill" restorationIdentifier="AdventureTimeStackView2" translatesAutoresizingMaskIntoConstraints="NO" id="QKQ-n3-RFm">
                                         <rect key="frame" x="0.0" y="168" width="320" height="168"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="endless_view_to_sea-wallpaper-1920x1080" translatesAutoresizingMaskIntoConstraints="NO" id="Bd8-vF-1jf">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="AdventureTimeEndlessViewImage" image="endless_view_to_sea-wallpaper-1920x1080" translatesAutoresizingMaskIntoConstraints="NO" id="Bd8-vF-1jf">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ykb-RT-ngf">
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="AdventureTimeButton2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ykb-RT-ngf">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.50423635563380287" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <segue destination="KcL-Ju-Ww2" kind="show" id="Sgf-il-VNA"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white light bulb" translatesAutoresizingMaskIntoConstraints="NO" id="SdD-HZ-ZkY">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="AdventureTimeWhiteLightBulbImage" image="white light bulb" translatesAutoresizingMaskIntoConstraints="NO" id="SdD-HZ-ZkY">
                                                 <rect key="frame" x="88" y="20" width="145" height="128"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="145" id="CiR-k7-eba"/>
@@ -95,20 +95,20 @@
                                             <constraint firstItem="Ykb-RT-ngf" firstAttribute="top" secondItem="QKQ-n3-RFm" secondAttribute="top" id="wd7-nb-Vez"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="10m-WB-mGv">
+                                    <view contentMode="scaleToFill" restorationIdentifier="AdventureTimeStackView3" translatesAutoresizingMaskIntoConstraints="NO" id="10m-WB-mGv">
                                         <rect key="frame" x="0.0" y="336" width="320" height="168"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beautiful_road_3-wallpaper-2048x1152" translatesAutoresizingMaskIntoConstraints="NO" id="q6b-Bu-EkD">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="AdventureTimeBeautifulRoadImge" image="beautiful_road_3-wallpaper-2048x1152" translatesAutoresizingMaskIntoConstraints="NO" id="q6b-Bu-EkD">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7C-oy-gnY">
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="AdventureTimeButton3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7C-oy-gnY">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.39356844190140844" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
                                                     <action selector="addNewTravel:" destination="qDZ-Yv-Mtj" eventType="touchUpInside" id="ZsY-Ck-q5p"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white plus sign" translatesAutoresizingMaskIntoConstraints="NO" id="ox8-GQ-QVV">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="AdventureTimeWhitePlusImage" image="white plus sign" translatesAutoresizingMaskIntoConstraints="NO" id="ox8-GQ-QVV">
                                                 <rect key="frame" x="104" y="35.5" width="112" height="98"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="98" id="Rr5-6c-FkL"/>
@@ -163,11 +163,11 @@
                         <viewControllerLayoutGuide type="top" id="dEE-Wy-ymr"/>
                         <viewControllerLayoutGuide type="bottom" id="46z-a1-eZs"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="W1T-Bl-eZx">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="TravelsView" id="W1T-Bl-eZx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next travels:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9h7-RX-mE6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="TravelsViewHeader" text="Next travels:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9h7-RX-mE6">
                                 <rect key="frame" x="0.0" y="72" width="320" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="ccw-6y-5lp"/>
@@ -176,14 +176,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="74" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O2V-4g-1Ph">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TravelsTableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="74" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O2V-4g-1Ph">
                                 <rect key="frame" x="0.0" y="145" width="320" height="415"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="countryCell" rowHeight="74" id="Dpa-Fc-9QS" customClass="UserTravelsCell" customModule="aynelgul_pset6" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TravelsCountryCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="countryCell" rowHeight="74" id="Dpa-Fc-9QS" customClass="UserTravelsCell" customModule="aynelgul_pset6" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="Dpa-Fc-9QS" id="LWS-LC-SlV">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" restorationIdentifier="TravelContentView" tableViewCell="Dpa-Fc-9QS" id="LWS-LC-SlV">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -239,22 +239,22 @@
                         <viewControllerLayoutGuide type="top" id="Z2H-E5-2Py"/>
                         <viewControllerLayoutGuide type="bottom" id="kxj-Xo-1vF"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="B7Z-Bz-biO">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="TipsViewController" id="B7Z-Bz-biO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="76" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f0C-Jj-GA7">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TipsTableViewOutlet" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="76" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f0C-Jj-GA7">
                                 <rect key="frame" x="0.0" y="130" width="320" height="438"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tipsCell" rowHeight="76" id="3An-x5-yZ3" customClass="TipsCell" customModule="aynelgul_pset6" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TipsCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tipsCell" rowHeight="76" id="3An-x5-yZ3" customClass="TipsCell" customModule="aynelgul_pset6" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3An-x5-yZ3" id="n1s-sM-YnV">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="TravelsContentView" tableViewCell="3An-x5-yZ3" id="n1s-sM-YnV">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1j-U3-inr">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="TipsViewTipsLabel" text="Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1j-U3-inr">
                                                     <rect key="frame" x="8" y="0.0" width="27" height="67"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                     <nil key="textColor"/>
@@ -314,20 +314,20 @@
                         <viewControllerLayoutGuide type="top" id="Ggd-Jq-Uol"/>
                         <viewControllerLayoutGuide type="bottom" id="dHp-n6-AnI"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="eRQ-BJ-a9x">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="SpecificTravelViewController" id="eRQ-BJ-a9x">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EEe-Qm-tzV">
+                            <stackView opaque="NO" contentMode="scaleToFill" restorationIdentifier="SpecificStackView" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EEe-Qm-tzV">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jOm-ff-huy">
+                                    <view contentMode="scaleToFill" restorationIdentifier="SpecificViewWithImage" translatesAutoresizingMaskIntoConstraints="NO" id="jOm-ff-huy">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="252"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E9F-5Y-GqI">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="SpecificFlagImageOutlet" translatesAutoresizingMaskIntoConstraints="NO" id="E9F-5Y-GqI">
                                                 <rect key="frame" x="63" y="69" width="194" height="114"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hO1-hK-iry">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="SpecificCountryOutlet" text="Country" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hO1-hK-iry">
                                                 <rect key="frame" x="0.0" y="8" width="320" height="36"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                                 <nil key="textColor"/>
@@ -346,10 +346,10 @@
                                             <constraint firstItem="hO1-hK-iry" firstAttribute="top" secondItem="jOm-ff-huy" secondAttribute="topMargin" id="vtJ-dK-J9k"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IXX-XK-9AT">
+                                    <view contentMode="scaleToFill" restorationIdentifier="SpecificView2Capital" translatesAutoresizingMaskIntoConstraints="NO" id="IXX-XK-9AT">
                                         <rect key="frame" x="0.0" y="252" width="320" height="252"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country not found." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qy-lv-mKz">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="SpecificPopulationOutlet" text="Country not found." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qy-lv-mKz">
                                                 <rect key="frame" x="8" y="99" width="304" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="22" id="eur-HF-YvH"/>
@@ -358,7 +358,7 @@
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country not found." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1N-xD-lT1">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="SpecificCurrencyOutlet" text="Country not found." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1N-xD-lT1">
                                                 <rect key="frame" x="8" y="152" width="304" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="AS6-bf-02l"/>
@@ -367,7 +367,7 @@
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capital:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trF-5l-8nz">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="SpecificCapitalOutlet" text="Capital:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trF-5l-8nz">
                                                 <rect key="frame" x="8" y="23" width="66" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="PXh-9C-Jij"/>
@@ -377,7 +377,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Population:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBL-yz-fMy">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="SpecificPopulation2" text="Population:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBL-yz-fMy">
                                                 <rect key="frame" x="8" y="77" width="95.5" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="na9-MJ-Dkw"/>
@@ -386,7 +386,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Se-us-Qkt">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="SpecificCurrency2" text="Currency:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Se-us-Qkt">
                                                 <rect key="frame" x="8" y="129" width="85" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="0Lb-U6-lnb"/>
@@ -396,7 +396,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country not found." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaJ-tR-4FP">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="SpecificCapital2" text="Country not found." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaJ-tR-4FP">
                                                 <rect key="frame" x="8" y="45" width="304" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="TQd-WV-JJE"/>
@@ -405,7 +405,7 @@
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country not found." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Cs-It-EbT">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="SpecificRegionOutlet" text="Country not found." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Cs-It-EbT">
                                                 <rect key="frame" x="8" y="203" width="312" height="26"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -498,20 +498,20 @@
                         <viewControllerLayoutGuide type="top" id="isf-7n-mct"/>
                         <viewControllerLayoutGuide type="bottom" id="YIY-26-EgV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="s9t-l8-x84">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="LoginViewController" id="s9t-l8-x84">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountains_landscape_hd_4k-3840x2160" translatesAutoresizingMaskIntoConstraints="NO" id="UWa-Iw-oNH">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="LoginMountainsImage" image="mountains_landscape_hd_4k-3840x2160" translatesAutoresizingMaskIntoConstraints="NO" id="UWa-Iw-oNH">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adventure Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yk-Qd-pIC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="LoginAdventureHeader" text="Adventure Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yk-Qd-pIC">
                                 <rect key="frame" x="0.0" y="103" width="320" height="81"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="37"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.74480083626760563" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I2M-H2-NHZ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="LoginTextfieldMail" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I2M-H2-NHZ">
                                 <rect key="frame" x="70" y="247" width="180" height="30"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
@@ -519,7 +519,7 @@
                                     <outlet property="delegate" destination="IVB-2z-HKu" id="h0T-Yk-aF6"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xrj-pH-UJQ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="LoginTextfieldPassword" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xrj-pH-UJQ">
                                 <rect key="frame" x="70" y="285" width="180" height="30"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -527,7 +527,7 @@
                                     <outlet property="delegate" destination="IVB-2z-HKu" id="Ey2-WH-gWl"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hC4-s8-iuQ">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="LoginButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hC4-s8-iuQ">
                                 <rect key="frame" x="70" y="335" width="180" height="38"/>
                                 <color key="backgroundColor" red="0.1168516578966641" green="0.33048319690953692" blue="0.41951824439004293" alpha="0.78870488556338025" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -547,7 +547,7 @@
                                     <action selector="loginTouch:" destination="IVB-2z-HKu" eventType="touchUpInside" id="Krj-xy-U2v"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtu-2D-ra7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="LoginSignUpLabel" text="Sign up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtu-2D-ra7">
                                 <rect key="frame" x="120.5" y="510" width="81" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="hMw-mH-ozu"/>
