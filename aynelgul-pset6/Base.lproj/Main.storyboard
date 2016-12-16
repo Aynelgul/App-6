@@ -242,12 +242,69 @@
                     <view key="view" contentMode="scaleToFill" id="B7Z-Bz-biO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="76" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f0C-Jj-GA7">
+                                <rect key="frame" x="0.0" y="130" width="320" height="438"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tipsCell" rowHeight="76" id="3An-x5-yZ3" customClass="TipsCell" customModule="aynelgul_pset6" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="76"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3An-x5-yZ3" id="n1s-sM-YnV">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1j-U3-inr">
+                                                    <rect key="frame" x="8" y="0.0" width="27" height="67"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="e1j-U3-inr" firstAttribute="top" secondItem="n1s-sM-YnV" secondAttribute="top" id="UUl-Hn-WWV"/>
+                                                <constraint firstItem="e1j-U3-inr" firstAttribute="leading" secondItem="n1s-sM-YnV" secondAttribute="leadingMargin" id="bx8-Bx-YMs"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="e1j-U3-inr" secondAttribute="bottom" id="nEb-h5-NFk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="tipsLabel" destination="e1j-U3-inr" id="MSq-c1-gef"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="KcL-Ju-Ww2" id="LWV-Nf-OIO"/>
+                                    <outlet property="delegate" destination="KcL-Ju-Ww2" id="1Oh-Fq-Y6H"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Travel Tips" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOL-hV-Dd3">
+                                <rect key="frame" x="0.0" y="72" width="320" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="j9o-ZR-6Eg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zOL-hV-Dd3" secondAttribute="trailing" id="8if-Wv-WCH"/>
+                            <constraint firstItem="f0C-Jj-GA7" firstAttribute="bottom" secondItem="kxj-Xo-1vF" secondAttribute="top" id="b1D-Kt-p74"/>
+                            <constraint firstItem="zOL-hV-Dd3" firstAttribute="leading" secondItem="f0C-Jj-GA7" secondAttribute="leading" id="cNf-eR-K3F"/>
+                            <constraint firstItem="zOL-hV-Dd3" firstAttribute="trailing" secondItem="f0C-Jj-GA7" secondAttribute="trailing" id="drV-fL-gte"/>
+                            <constraint firstItem="f0C-Jj-GA7" firstAttribute="top" secondItem="zOL-hV-Dd3" secondAttribute="bottom" constant="8" symbolic="YES" id="eIv-Bm-x5E"/>
+                            <constraint firstItem="zOL-hV-Dd3" firstAttribute="leading" secondItem="B7Z-Bz-biO" secondAttribute="leading" id="l9S-9y-ub3"/>
+                            <constraint firstItem="zOL-hV-Dd3" firstAttribute="top" secondItem="Z2H-E5-2Py" secondAttribute="bottom" constant="8" symbolic="YES" id="tuc-VK-0ud"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tipsTableViewOutlet" destination="f0C-Jj-GA7" id="n2U-6P-Gja"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H7V-d7-iKV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2964" y="967"/>
+            <point key="canvasLocation" x="2962.5" y="966.54929577464793"/>
         </scene>
         <!--Specific Travel View Controller-->
         <scene sceneID="OlO-Vt-CwT">
@@ -488,7 +545,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loginTouch:" destination="IVB-2z-HKu" eventType="touchUpInside" id="Krj-xy-U2v"/>
-                                    <segue destination="iBP-Kk-jW0" kind="show" identifier="gotoMenu" id="W7g-5q-MVn"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtu-2D-ra7">
@@ -540,6 +596,7 @@
                     <connections>
                         <outlet property="textFieldLoginEmail" destination="I2M-H2-NHZ" id="rRO-Km-xuX"/>
                         <outlet property="textFieldLoginPassword" destination="xrj-pH-UJQ" id="NbQ-i1-kUg"/>
+                        <segue destination="iBP-Kk-jW0" kind="show" identifier="gotoMenu" id="Axb-ci-r2r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qNp-8g-Cdg" sceneMemberID="firstResponder"/>

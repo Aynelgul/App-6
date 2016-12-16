@@ -12,15 +12,18 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
+    //MARK: User defaults.
+    let defaults = UserDefaults.standard
+    
+    
     // MARK: Outlets
     @IBOutlet weak var textFieldLoginEmail: UITextField!
     @IBOutlet weak var textFieldLoginPassword: UITextField!
     
     // MARK: Actions
     @IBAction func loginTouch(_ sender: UIButton) {
-        
-//        // Sign In with credentials.
-        guard let email = textFieldLoginEmail.text, let password = textFieldLoginPassword.text else { return }
+        guard let email = textFieldLoginEmail.text, let password = textFieldLoginPassword.text else { return
+        }
         FIRAuth.auth()?.signIn(withEmail: email, password: password) { (user, error) in
             if let error = error {
                 print(error.localizedDescription)
@@ -32,6 +35,8 @@ class LoginViewController: UIViewController {
                 return
             }
             self.signedIn(user!)
+            self.defaults.set(self.textFieldLoginEmail.text ,forKey: "email")
+
         }
     }
     
@@ -40,14 +45,26 @@ class LoginViewController: UIViewController {
         FIRAuth.auth()?.createUser(withEmail: email, password: password) { (user, error) in
             if let error = error {
                 print(error.localizedDescription)
+                
+                // Check if emailadress is not used already
+                if error.localizedDescription == "The email address is already in use by another account." {
+                    let alert = UIAlertController(title: "Oops!", message: "The email address is already in use by another account.", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+                
+                let alert = UIAlertController(title: "Oops!", message: "Sign up failed. Please fill in all fields or check your e-mailadress.", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                
                 return
             }
             self.setDisplayName(user!)
+            self.defaults.set(self.textFieldLoginEmail.text ,forKey: "email")
         }
     }
     
-    // MARK: functions
-    
+    // MARK: Functions.
     func setDisplayName(_ user: FIRUser) {
         let changeRequest = user.profileChangeRequest()
         changeRequest.displayName = user.email!.components(separatedBy: "@")[0]
@@ -61,8 +78,7 @@ class LoginViewController: UIViewController {
     }
     
     func signedIn(_ user: FIRUser?) {
-        
-        performSegue(withIdentifier: "gotoMenu", sender: nil)
+        textFieldLoginPassword.text = ""
         
     }
     
@@ -80,8 +96,16 @@ class LoginViewController: UIViewController {
             self.signedIn(user)
         }
         
-        self.textFieldLoginEmail.text! = ""
-        self.textFieldLoginPassword.text! = ""
+        FIRAuth.auth()!.addStateDidChangeListener() { auth, user in
+            if user != nil {
+                self.performSegue(withIdentifier: "gotoMenu", sender: nil)
+            }
+        }
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        textFieldLoginEmail.text = self.defaults.string(forKey: "email")
     }
     
     // Function when tap is recognized.

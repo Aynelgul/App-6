@@ -10,6 +10,7 @@
 		0C254FF1DA378BC6B6FC71F8 /* Pods_aynelgul_pset6UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A63009FEA9E5FB1E3B6C3CE /* Pods_aynelgul_pset6UITests.framework */; };
 		4BAB795F557C99B8E4205538 /* Pods_aynelgul_pset6Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CBB5523187F2887961D7C3 /* Pods_aynelgul_pset6Tests.framework */; };
 		7F77288385C63B81795DDD11 /* Pods_aynelgul_pset6.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B69AB338181E17C8212DFD5 /* Pods_aynelgul_pset6.framework */; };
+		85A96DC71E033A6100595040 /* TipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A96DC61E033A6100595040 /* TipsCell.swift */; };
 		85D9885A1DF6F6CB00CACE84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D988591DF6F6CB00CACE84 /* AppDelegate.swift */; };
 		85D9885F1DF6F6CB00CACE84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85D9885D1DF6F6CB00CACE84 /* Main.storyboard */; };
 		85D988611DF6F6CC00CACE84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85D988601DF6F6CC00CACE84 /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		3A63009FEA9E5FB1E3B6C3CE /* Pods_aynelgul_pset6UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aynelgul_pset6UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66E3D6C8EF7B8B43AF0508FC /* Pods-aynelgul-pset6Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aynelgul-pset6Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aynelgul-pset6Tests/Pods-aynelgul-pset6Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6F83C205BE4C5CD985C55B19 /* Pods-aynelgul-pset6UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aynelgul-pset6UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-aynelgul-pset6UITests/Pods-aynelgul-pset6UITests.release.xcconfig"; sourceTree = "<group>"; };
+		85A96DC61E033A6100595040 /* TipsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsCell.swift; sourceTree = "<group>"; };
 		85D988561DF6F6CA00CACE84 /* aynelgul-pset6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "aynelgul-pset6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D988591DF6F6CB00CACE84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85D9885E1DF6F6CB00CACE84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -199,10 +201,11 @@
 			children = (
 				85D988891DF73F9600CACE84 /* LoginViewController.swift */,
 				85D988871DF7283F00CACE84 /* MenuViewController.swift */,
-				85D9888E1DF74C0D00CACE84 /* TipsViewController.swift */,
-				85D988901DF74E8A00CACE84 /* SpecificTravelViewController.swift */,
 				85D988AE1DFB70DC00CACE84 /* TravelsViewController.swift */,
+				85D988901DF74E8A00CACE84 /* SpecificTravelViewController.swift */,
+				85D9888E1DF74C0D00CACE84 /* TipsViewController.swift */,
 				85D988AA1DFB66A800CACE84 /* UserTravelsCell.swift */,
+				85A96DC61E033A6100595040 /* TipsCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85D988AB1DFB66A800CACE84 /* UserTravelsCell.swift in Sources */,
+				85A96DC71E033A6100595040 /* TipsCell.swift in Sources */,
 				85D9889D1DF8CD2800CACE84 /* TravelItem.swift in Sources */,
 				85D9888A1DF73F9600CACE84 /* LoginViewController.swift in Sources */,
 				85D9888F1DF74C0D00CACE84 /* TipsViewController.swift in Sources */,

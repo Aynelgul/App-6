@@ -8,13 +8,14 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 class MenuViewController: UIViewController {
     
     
     // MARK: Properties
     var items: [TravelItem] = []
-    
+    var user: User!
     
     @IBAction func logoutButton(_ sender: UIBarButtonItem) {
         let firebaseAuth = FIRAuth.auth()
@@ -32,7 +33,7 @@ class MenuViewController: UIViewController {
     @IBAction func addNewTravel(_ sender: UIButton) {
 
         let alert = UIAlertController(title: "New adventure", message: "Add country:", preferredStyle: .alert)
-        
+
         alert.addTextField { (textField) in
             textField.text = ""
         }
@@ -73,7 +74,10 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        FIRAuth.auth()!.addStateDidChangeListener { auth, user in
+            guard let user = user else { return }
+            self.user = User(authData: user)
+        }
     }
     
 

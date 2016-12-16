@@ -62,6 +62,17 @@ class TravelsViewController: UIViewController, UITableViewDataSource, UITableVie
         performSegue(withIdentifier: "detailView", sender: nil)
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let travelItem = items[indexPath.row]
+            travelItem.ref?.removeValue()
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detailView" {
             let destination = segue.destination as? SpecificTravelViewController

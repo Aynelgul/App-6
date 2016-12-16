@@ -12,7 +12,7 @@ import Firebase
 class SpecificTravelViewController: UIViewController {
     
     
-    // Outlets.
+    // MARK: Outlets.
     @IBOutlet weak var countryOulet: UILabel?
     @IBOutlet weak var capitalOutlet: UILabel!
     @IBOutlet weak var populationOutlet: UILabel!
@@ -34,6 +34,7 @@ class SpecificTravelViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: Functions.
     func HTTPSrequest(title: String) {
         let title = title.replacingOccurrences(of: " ", with: "+")
         let url = URL(string: "https://restcountries.eu/rest/v1/name/"+title+"?fullText=true")
@@ -43,35 +44,36 @@ class SpecificTravelViewController: UIViewController {
                 return
             }
             do {
-                let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! [AnyObject]
-
-                DispatchQueue.main.async {
+                // IF LET GEBRUIKEN
+                let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as? Array<NSDictionary>
+                
+                if let jsonArray = json {
+                
+                    DispatchQueue.main.async {
+                        
+                        let capital = jsonArray[0]["capital"]! as! String
+                        let population = jsonArray[0]["population"]!
+                        let currency = jsonArray[0]["currencies"] as! NSArray
+                        
+                        // NOG AANPASSEN
+                        let testcur = currency[0] as! String
+                        
+                        let region = jsonArray[0]["region"]! as! String
+                        let alpha2Code = jsonArray[0]["alpha2Code"] as! String
+                        
+                        self.capitalOutlet.text = capital
+                        self.populationOutlet.text = String(describing: population)
+                        self.currencyOutlet.text = testcur
+                        self.regionOutlet.text = region
+                        
+                        self.HTTPSrequestImage(title: alpha2Code)
+                    }
                     
-                    let capital = json[0]["capital"]! as! String 
-//                    print("TEST: \(capital)")
-                    let population = json[0]["population"]!
-//                    print("TEST: \(population)")
-                    let currency = json[0]["currencies"] as! NSArray
-//                    print("TEST: \(currency)")
-                    
-                    // NOG AANPASSEN
-                    let testcur = currency[0] as! String
-                    
-                    let region = json[0]["region"]! as! String
-//                    print("TEST: \(region)")
-                    let alpha2Code = json[0]["alpha2Code"] as! String
-//                    print("TEST: \(alpha2Code)")
-                    
-                    self.capitalOutlet.text = capital
-                    self.populationOutlet.text = String(describing: population!)
-                    self.currencyOutlet.text = testcur
-                    self.regionOutlet.text = region
-                    
-                    self.HTTPSrequestImage(title: alpha2Code)
-                    
+                } else {
+                    print("KLOPT")
                 }
             } catch {
-                print(error,"Country not found.")
+                print(error,"Something went wrong!")
             }
         }).resume()
     
