@@ -11,13 +11,17 @@ import Firebase
 
 class TravelsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    // MARK: Outlets
     @IBOutlet weak var travelTableView: UITableView!
-
-    var items: [TravelItem] = []
-    var country_segue_name: String!
     
+    // MARK: Properties.
+    var items: [TravelItem] = []
+    var countrySegueName: String!
+    
+    // Setup Firebase reference.
     let ref = FIRDatabase.database().reference(withPath: "travel-items")
-
+    
+    // MARK: Functions.
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,9 +59,7 @@ class TravelsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let name = items[indexPath.row].name
-        print(name)
-        self.country_segue_name = name
-        print(self.country_segue_name)
+        self.countrySegueName = name
         
         performSegue(withIdentifier: "detailView", sender: nil)
     }
@@ -76,8 +78,7 @@ class TravelsViewController: UIViewController, UITableViewDataSource, UITableVie
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detailView" {
             let destination = segue.destination as? SpecificTravelViewController
-            print(self.country_segue_name)
-            destination?.countryreceiver = self.country_segue_name
+            destination?.countryreceiver = self.countrySegueName
         }
     }
     

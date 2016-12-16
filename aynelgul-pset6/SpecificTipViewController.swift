@@ -13,8 +13,10 @@ class SpecificTipViewController: UIViewController {
     // MARK: Outlets.
     @IBOutlet weak var specificTipOutlet: UITextView!
     
+    // MARK: Properties.
     var tipreceiver = String()
 
+    // Mark: Functions.
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,7 +27,6 @@ class SpecificTipViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

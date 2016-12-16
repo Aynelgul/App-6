@@ -12,7 +12,7 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
-    //MARK: User defaults.
+    // MARK: User defaults.
     let defaults = UserDefaults.standard
     
     
@@ -46,7 +46,7 @@ class LoginViewController: UIViewController {
             if let error = error {
                 print(error.localizedDescription)
                 
-                // Check if emailadress is not used already
+                // Check if e-mail is not used already
                 if error.localizedDescription == "The email address is already in use by another account." {
                     let alert = UIAlertController(title: "Oops!", message: "The email address is already in use by another account.", preferredStyle: UIAlertControllerStyle.alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
@@ -87,7 +87,6 @@ class LoginViewController: UIViewController {
         textFieldLoginPassword.text = ""
     }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -101,6 +100,7 @@ class LoginViewController: UIViewController {
             self.signedIn(user)
         }
         
+        // Listener for state change of user.
         FIRAuth.auth()!.addStateDidChangeListener() { auth, user in
             if user != nil {
                 self.performSegue(withIdentifier: "gotoMenu", sender: nil)
@@ -125,7 +125,6 @@ class LoginViewController: UIViewController {
     
     override func encodeRestorableState(with coder: NSCoder) {
         if let email = textFieldLoginPassword.text {
-            print(email)
             coder.encode(email, forKey: "LoginTextfieldPassword")
         }
         super.encodeRestorableState(with: coder)

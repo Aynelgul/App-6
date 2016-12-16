@@ -218,11 +218,11 @@
 				85D988891DF73F9600CACE84 /* LoginViewController.swift */,
 				85D988871DF7283F00CACE84 /* MenuViewController.swift */,
 				85D988AE1DFB70DC00CACE84 /* TravelsViewController.swift */,
+				85D988AA1DFB66A800CACE84 /* UserTravelsCell.swift */,
 				85D988901DF74E8A00CACE84 /* SpecificTravelViewController.swift */,
 				85D9888E1DF74C0D00CACE84 /* TipsViewController.swift */,
-				85D988AA1DFB66A800CACE84 /* UserTravelsCell.swift */,
-				85A96DC61E033A6100595040 /* TipsCell.swift */,
 				85A96DD01E04956A00595040 /* SpecificTipViewController.swift */,
+				85A96DC61E033A6100595040 /* TipsCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
