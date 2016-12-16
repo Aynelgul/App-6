@@ -11,7 +11,7 @@ import UIKit
 class TipsCell: UITableViewCell {
 
     // MARK: Outlets.
-    @IBOutlet weak var tipsLabel: UILabel!
+    @IBOutlet weak var tipsTextField: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()

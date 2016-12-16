@@ -13,6 +13,7 @@
 		85A96DC71E033A6100595040 /* TipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A96DC61E033A6100595040 /* TipsCell.swift */; };
 		85A96DCB1E0420FC00595040 /* review.md in Sources */ = {isa = PBXBuildFile; fileRef = 85A96DCA1E0420FC00595040 /* review.md */; };
 		85A96DCD1E04335100595040 /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 85A96DCC1E04335100595040 /* readme.md */; };
+		85A96DD11E04956A00595040 /* SpecificTipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A96DD01E04956A00595040 /* SpecificTipViewController.swift */; };
 		85D9885A1DF6F6CB00CACE84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D988591DF6F6CB00CACE84 /* AppDelegate.swift */; };
 		85D9885F1DF6F6CB00CACE84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85D9885D1DF6F6CB00CACE84 /* Main.storyboard */; };
 		85D988611DF6F6CC00CACE84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85D988601DF6F6CC00CACE84 /* Assets.xcassets */; };
@@ -66,6 +67,7 @@
 		85A96DC61E033A6100595040 /* TipsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsCell.swift; sourceTree = "<group>"; };
 		85A96DCA1E0420FC00595040 /* review.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = review.md; sourceTree = "<group>"; };
 		85A96DCC1E04335100595040 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		85A96DD01E04956A00595040 /* SpecificTipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificTipViewController.swift; sourceTree = "<group>"; };
 		85D988561DF6F6CA00CACE84 /* aynelgul-pset6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "aynelgul-pset6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D988591DF6F6CB00CACE84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85D9885E1DF6F6CB00CACE84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				85D9888E1DF74C0D00CACE84 /* TipsViewController.swift */,
 				85D988AA1DFB66A800CACE84 /* UserTravelsCell.swift */,
 				85A96DC61E033A6100595040 /* TipsCell.swift */,
+				85A96DD01E04956A00595040 /* SpecificTipViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 				85D988991DF8CD0100CACE84 /* User.swift in Sources */,
 				85A96DCD1E04335100595040 /* readme.md in Sources */,
 				85D988AF1DFB70DC00CACE84 /* TravelsViewController.swift in Sources */,
+				85A96DD11E04956A00595040 /* SpecificTipViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

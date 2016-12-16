@@ -243,32 +243,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TipsTableViewOutlet" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="76" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f0C-Jj-GA7">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TipsTableViewOutlet" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f0C-Jj-GA7">
                                 <rect key="frame" x="0.0" y="130" width="320" height="438"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TipsCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tipsCell" rowHeight="76" id="3An-x5-yZ3" customClass="TipsCell" customModule="aynelgul_pset6" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="76"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TipsCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tipsCell" rowHeight="75" id="3An-x5-yZ3" customClass="TipsCell" customModule="aynelgul_pset6" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="TravelsContentView" tableViewCell="3An-x5-yZ3" id="n1s-sM-YnV">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="TipsViewTipsLabel" text="Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1j-U3-inr">
-                                                    <rect key="frame" x="8" y="0.0" width="27" height="67"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4a3-9e-46b">
+                                                    <rect key="frame" x="8" y="0.0" width="304" height="66"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="e1j-U3-inr" firstAttribute="top" secondItem="n1s-sM-YnV" secondAttribute="top" id="UUl-Hn-WWV"/>
-                                                <constraint firstItem="e1j-U3-inr" firstAttribute="leading" secondItem="n1s-sM-YnV" secondAttribute="leadingMargin" id="bx8-Bx-YMs"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="e1j-U3-inr" secondAttribute="bottom" id="nEb-h5-NFk"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="tipsLabel" destination="e1j-U3-inr" id="MSq-c1-gef"/>
+                                            <outlet property="tipsTextField" destination="4a3-9e-46b" id="Ofl-mQ-CXQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -300,11 +296,50 @@
                     </view>
                     <connections>
                         <outlet property="tipsTableViewOutlet" destination="f0C-Jj-GA7" id="n2U-6P-Gja"/>
+                        <segue destination="tXg-qI-CHH" kind="show" identifier="tipDetailView" id="wCY-W5-2g5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H7V-d7-iKV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2962.5" y="966.54929577464793"/>
+        </scene>
+        <!--Specific Tip View Controller-->
+        <scene sceneID="25l-Vj-2vg">
+            <objects>
+                <viewController id="tXg-qI-CHH" customClass="SpecificTipViewController" customModule="aynelgul_pset6" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yKZ-Xy-FLt"/>
+                        <viewControllerLayoutGuide type="bottom" id="2j8-yu-Xud"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eDw-mr-4L1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hkm-lj-FT8">
+                                <rect key="frame" x="0.0" y="64" width="320" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JZX-NG-rYc">
+                                <rect key="frame" x="0.0" y="156" width="320" height="404"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="specificTipOutlet" destination="JZX-NG-rYc" id="D9B-hx-LNZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IRC-co-slE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3978.75" y="966.54929577464793"/>
         </scene>
         <!--Specific Travel View Controller-->
         <scene sceneID="OlO-Vt-CwT">
@@ -508,7 +543,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="LoginAdventureHeader" text="Adventure Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yk-Qd-pIC">
                                 <rect key="frame" x="0.0" y="103" width="320" height="81"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="37"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="0.74480083626760563" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.84754621478873238" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="LoginTextfieldMail" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I2M-H2-NHZ">

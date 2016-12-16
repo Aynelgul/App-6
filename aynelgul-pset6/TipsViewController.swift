@@ -13,6 +13,8 @@ class TipsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // MARK: Outlets.
     @IBOutlet weak var tipsTableViewOutlet: UITableView!
+    
+    var tip = (String)()
   
     
     // MARK:
@@ -38,10 +40,25 @@ class TipsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCell(withIdentifier: "tipsCell", for: indexPath) as! TipsCell
         
         let tip = tips[indexPath.row]
-        cell.tipsLabel.text = tip
+        cell.tipsTextField.text = tip
         
         return cell
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tip = tips[indexPath.row]
+        
+        performSegue(withIdentifier: "tipDetailView", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "tipDetailView" {
+            let destination = segue.destination as? SpecificTipViewController
+            destination?.tipreceiver = self.tip
+        }
+    }
+
     
     /*
     // MARK: - Navigation
