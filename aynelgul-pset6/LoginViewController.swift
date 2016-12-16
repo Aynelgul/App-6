@@ -85,7 +85,6 @@ class LoginViewController: UIViewController {
     
     func signedIn(_ user: FIRUser?) {
         textFieldLoginPassword.text = ""
-        
     }
     
 

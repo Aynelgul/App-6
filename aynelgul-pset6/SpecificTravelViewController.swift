@@ -70,7 +70,10 @@ class SpecificTravelViewController: UIViewController {
                     }
                     
                 } else {
-                    print("KLOPT")
+                    print("Country not found.")
+                    let alert = UIAlertController(title: "Oops!", message: "Country not found.", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                 }
             } catch {
                 print(error,"Something went wrong!")
